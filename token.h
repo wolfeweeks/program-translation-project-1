@@ -1,0 +1,96 @@
+#ifndef TOKEN_H
+#define TOKEN_H
+
+typedef enum tokenId {
+  IDENT_TK,
+  START_TK,
+  REPEAT_TK,
+  UNTIL_TK,
+  WHOLE_TK,
+  LABEL_TK,
+  QUIT_TK,
+  LISTEN_TK,
+  YELL_TK,
+  MAIN_TK,
+  PORTAL_TK,
+  IF_TK,
+  THEN_TK,
+  PICK_TK,
+  DECLARE_TK,
+ASSIGN_TK,
+PROC_TK,
+ONE_EQUALS_TK,
+LESS_THAN_EQUALS_TK,
+GREAT_THAN_EQUALS_TK,
+TWO_EQUALS_TK,
+NOT_EQUALS_TK,
+COLON_TK,
+COLON_EQUALS_TK,
+PLUS_TK,
+MINUS_TK,
+TIMES_TK,
+DIVIDE_TK,
+MODULO_TK,
+DOT_TK,
+LEFT_PAREN_TK,
+RIGHT_PAREN_TK,
+COMMA_TK,
+LEFT_CURL_TK,
+RIGHT_CURL_TK,
+SEMI_TK,
+LEFT_BRACKET_TK,
+RIGHT_BRACKET_TK,
+NUM_TK,
+EOF_TK,
+} tokenId;
+
+extern char* tokenNames[];
+//  = {
+//   "Identifier",
+//   "Start Keyword",
+//   "Repeat Keyword",
+//   "Until Keyword",
+//   "Whole Keyword",
+//   "Label Keyword",
+//   "Quit Keyword",
+//   "Listen Keyword",
+//   "Yell Keyword",
+//   "Main Keyword",
+//   "Portal Keyword",
+//   "If Keyword",
+//   "Then Keyword",
+//   "Pick Keyword",
+//   "Declare Keyword",
+//   "Assign Keyword",
+//   "Proc Keyword"
+//   "= Operator",
+//   "<= Operator",
+//   ">= Operator",
+//   "== Operator",
+//   "!= Operator",
+//   ": Operator",
+//   ":= Operator",
+//   "+ Operator",
+//   "- Operator",
+//   "* Operator",
+//   "/ Operator",
+//   "% Operator",
+//   ". Delimiter",
+//   "( Delimiter",
+//   ") Delimiter",
+//   ", Delimiter",
+//   "{ Delimiter",
+//   "} Delimiter",
+//   "; Delimiter",
+//   "[ Delimiter",
+//   "] Delimiter",
+//   "Number",
+//   "End of File"
+// };
+
+typedef struct Token {
+  tokenId tkId;
+  char* tkInstance;
+} Token;
+
+#endif // !TOKEN_H
